@@ -1,0 +1,16 @@
+# 1. trigger, when the workflow wake up
+on:
+  push:
+    branches: ["main"]
+
+# 2. the works which must be executed
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # virtual github server
+
+    steps:
+      - name: Step 1 - Print Welcone Message
+        run: echo "Hello World! CI/CD Pipeline is running..."
+
+      - name: Step 2 - Check Docker Version on runner
+        run: docker --version
