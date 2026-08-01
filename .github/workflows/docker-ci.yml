@@ -19,5 +19,5 @@ jobs:
 
       - name: 3. Build Docker Image
         run: |
-          docker build -t my-ci-app:\${{ github.sha }}
-          echo "Docker iamge built successfully with tag: \${{ github.sha }}"
+          docker build -t my-ci-app:${{ github.sha }} .
+          echo "Docker iamge built successfully with tag:${{ github.sha }}"
