@@ -1,5 +1,3 @@
 FROM nginx:alpine
-RUN echo " 
-Built automatically by github actions!
-" > /usr/share/nginx/html/index.html
+RUN echo "<h1>Built automatically by GitHub Actions!</h1>" > /usr/share/nginx/html/index.html
 EXPOSE 80
