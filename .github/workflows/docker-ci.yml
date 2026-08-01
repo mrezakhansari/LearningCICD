@@ -3,13 +3,6 @@ name: Docker Build & Check
 on:
   push:
     branches: ["main"]
-    pull_request:
-cat << EOF > .github/workflows/docker-ci.yml
-name: Docker Build & Check
-
-on:
-  push:
-    branches: ["main"]
   pull_request:
     branches: ["main"]
 
@@ -28,27 +21,3 @@ jobs:
         run: |
           docker build -t my-ci-app:\${{ github.sha }}
           echo "Docker iamge built successfully with tag: \${{ github.sha }}"
-
-
-
-
-
-
-
-
-
-cat << EOF > .github/workflows/docker-ci.yml
-name: Docker Build & Check
-
-on:
-  push:
-    branches: ["main"]
-    pull_request:
-cat << EOF > .github/workflows/docker-ci.yml
-name: Docker Build & Check
-
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-
